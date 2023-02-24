@@ -1,0 +1,35 @@
+﻿@model WebBlogs.Areas.Admin.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutLogin.cshtml";
+}
+
+<h1>Login</h1>
+<div class="card ">
+            @*<div class="card-header text-center"><a href="~AdminAssets/index.html"><img class="logo-img" src="~AdminAssets/assets/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>*@
+            <div class="card-body">
+                <form asp-area="Admin" asp-controller="Accounts" asp-action="Login" method="post">
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" asp-for="Email" type="text" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" asp-for="Password" type="password" placeholder="Password">
+                    </div>
+                    @*<div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
+                        </label>
+                    </div>*@
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </form>
+            </div>
+            <div class="card-footer bg-white p-0  ">
+                <div class="card-footer-item card-footer-item-bordered">
+                    <a href="#" class="footer-link">Create An Account</a>
+                </div>
+                <div class="card-footer-item card-footer-item-bordered">
+                    <a href="#" class="footer-link">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+

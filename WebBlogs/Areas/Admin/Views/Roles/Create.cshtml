@@ -1,0 +1,38 @@
+﻿@model WebBlogs.Models.Role
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+    <div class="card">
+        <h5 class="card-header">TẠO MỚI QUYỀN TRUY CẬP</h5>
+        <div class="card-body">
+            <form asp-area="Admin" asp-controller="Roles" asp-action="Create" method="post">
+                <div class="form-group row">
+                    <label class="col-3 col-lg-2 col-form-label text-right">Role Name</label>
+                    <div class="col-sm-12">
+                        <input asp-for="RoleName" type="text" placeholder="RoleName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Role Description</label>
+                    <div class="col-sm-12">
+                        <input asp-for="RoleDescription" type="text" placeholder="RoleDescription" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="row pt-2 pt-sm-3 mt-1">
+                    
+                    <div class="col-sm-12 pl-0">
+                        <p class="text-right">
+                            <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                            <button asp-area="Admin" asp-controller="Roles" asp-action="Index" class="btn btn-space btn-secondary">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
